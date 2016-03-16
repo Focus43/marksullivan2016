@@ -13,14 +13,18 @@ $app = new Application();
  * Detect the environment based on the hostname of the server
  * ----------------------------------------------------------------------------
  */
-$app->detectEnvironment(
-    array(
-        'local' => array(
-            'hostname'
-        ),
-        'production' => array(
-            'live.site'
-        )
-    ));
+ $app->detectEnvironment(
+     array(
+         'local' => array(
+             'vagrant-ubuntu-vivid-64'
+         ),
+         'stage' => array(
+             'stage01.focusfortythree.com'
+         ),
+         'production' => array(
+             'prod01.focusfortythree.com'
+         )
+     )
+ );
 
-return $app;
+ return $app;
